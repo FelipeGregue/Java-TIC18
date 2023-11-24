@@ -1,0 +1,319 @@
+Questão 1
+
+Em Java , uma classe é uma estrutura que representa um modelo para objetos. 
+Ela define um conjunto de atributos (variáveis) e métodos (funções) que operam 
+nesses atributos. As classes são utilizadas como moldes para criar instâncias 
+específicas de objetos.
+
+Classe: Uma classe é uma estrutura abstrata que define as propriedades 
+e comportamentos comuns a um conjunto de objetos. Ela é um modelo que pode ser 
+utilizado para criar objetos.
+
+Objeto: Um objeto é uma instância específica de uma classe. Ele representa uma 
+entidade concreta e possui valores específicos para seus atributos. Os objetos 
+são criados a partir de classes.
+
+class Ponto {
+public:
+    int x, y;
+};
+
+public class Ponto {
+    public int x, y;
+}
+
+class Carro {
+public:
+    string modelo;
+    int ano;
+};
+
+public class Carro {
+    public String modelo;
+    public int ano;
+}
+
+class Livro {
+public:
+    string titulo;
+    string autor;
+    int anoPublicacao;
+};
+
+public class Livro {
+    public String titulo;
+    public String autor;
+    public int anoPublicacao;
+}
+
+class Retangulo {
+public:
+    float comprimento, largura;
+};
+
+public class Retangulo {
+    public float comprimento, largura;
+}
+
+class Estudante {
+public:
+    string nome;
+    int idade;
+    float nota;
+};
+
+public class Estudante {
+    public String nome;
+    public int idade;
+    public float nota;
+}
+
+Questão 2
+
+Em Java, a declaração de variáveis envolve a indicação do tipo de dado da variável,
+seguido pelo nome da variável.
+
+Os tipos de dados primitivos mais comuns em Java são:
+
+int: Para números inteiros.
+float: Para números de ponto flutuante de precisão simples.
+double: Para números de ponto flutuante de dupla precisão.
+char: Para caracteres individuais.
+boolean: Para valores booleanos (verdadeiro ou falso).
+
+// Declaração de uma variável inteira
+int numero;
+
+// Declaração de uma variável de ponto flutuante
+float nota;
+
+// Declaração de uma variável de texto (String)
+String nome;
+
+// Declaração de uma variável booleana
+boolean online;
+
+Em C++, a declaração de variáveis também envolve a indicação do tipo de dado, 
+seguido pelo nome da variável.
+ 
+Em C++, os tipos de dados primitivos são bastante semelhantes aos de Java:
+
+int: Para números inteiros.
+float: Para números de ponto flutuante de precisão simples.
+double: Para números de ponto flutuante de dupla precisão.
+char: Para caracteres individuais.
+bool: Para valores booleanos (true ou false).
+
+// Declaração de uma variável inteira
+int numero;
+
+// Declaração de uma variável de ponto flutuante
+float nota;
+
+// Declaração de uma variável de texto (string)
+std::string nome;
+
+// Declaração de uma variável booleana
+bool online;
+
+Questão 3
+
+A herança é um conceito fundamental em programação orientada a objetos que permite
+a criação de uma nova classe (subclasse) com base em uma classe existente
+(superclasse). A subclasse herda os membros (atributos e métodos) da superclasse
+e pode adicionar ou modificar esses membros conforme necessário. Isso promove a 
+reutilização de código e facilita a criação de hierarquias de classes.
+Para criar uma subclasse em Java, utiliza-se a palavra-chave extends
+// Superclasse
+class Animal {
+    void fazerSom() {
+        System.out.println("Som genérico de animal");
+    }
+}
+
+// Subclasse que herda de Animal
+class Gato extends Animal {
+    void miar() {
+        System.out.println("Miau");
+    }
+}
+
+public class ExemploHeranca {
+    public static void main(String[] args) {
+        // Criando uma instância da subclasse Gato
+        Gato gato = new Gato();
+
+        // Chamando métodos da superclasse e subclasse
+        gato.fazerSom();  // Herdado da superclasse Animal
+        gato.miar();      // Próprio da subclasse Gato
+    }
+}
+
+Em C++, a herança também é implementada usando a palavra-chave class, e a herança
+pública é indicada com public
+
+Exemplos: 
+
+class Animal {
+    void fazerSom() {
+        System.out.println("Som genérico de animal");
+    }
+}
+
+class Gato extends Animal {
+    void miar() {
+        System.out.println("Miau");
+    }
+}
+
+public class ExemploHeranca {
+    public static void main(String[] args) {
+        Gato gato = new Gato();
+        gato.fazerSom();
+        gato.miar();
+    }
+}
+
+
+class Animal {
+public:
+    void fazerSom() {
+        cout << "Som genérico de animal" << endl;
+    }
+};
+
+class Gato : public Animal {
+public:
+    void miar() {
+        cout << "Miau" << endl;
+    }
+};
+
+interface Ave {
+    void voar();
+}
+
+class Animal {
+    void fazerSom() {
+        System.out.println("Som genérico de animal");
+    }
+}
+
+class Pato extends Animal implements Ave {
+    void nadar() {
+        System.out.println("Nadando");
+    }
+
+    public void voar() {
+        System.out.println("Voando");
+    }
+}
+
+
+class Ave {
+public:
+    void voar() {
+        cout << "Voando" << endl;
+    }
+};
+
+class Pato : public Animal, public Ave {
+public:
+    void nadar() {
+        cout << "Nadando" << endl;
+    }
+};
+
+
+class Cachorro : public Animal {
+public:
+    void latir() {
+        cout << "Au Au" << endl;
+    }
+};
+
+class Pessoa {
+    Pessoa() {
+        System.out.println("Construtor Pessoa");
+    }
+}
+
+class Estudante extends Pessoa {
+    Estudante() {
+        System.out.println("Construtor Estudante");
+    }
+}
+
+
+class Pessoa {
+public:
+    Pessoa() {
+        cout << "Construtor Pessoa" << endl;
+    }
+
+    ~Pessoa() {
+        cout << "Destrutor Pessoa" << endl;
+    }
+};
+
+class Estudante : public Pessoa {
+public:
+    Estudante() {
+        cout << "Construtor Estudante" << endl;
+    }
+
+    ~Estudante() {
+        cout << "Destrutor Estudante" << endl;
+    }
+};
+
+class Veiculo {
+    protected int velocidade;
+
+    Veiculo(int v) {
+        velocidade = v;
+    }
+
+    void acelerar() {
+        System.out.println("Acelerando a " + velocidade + " km/h");
+    }
+}
+
+class Carro extends Veiculo {
+    Carro(int v) {
+        super(v);
+    }
+
+    void dirigir() {
+        acelerar();
+        System.out.println("Dirigindo o carro");
+    }
+}
+
+
+class Veiculo {
+protected:
+    int velocidade;
+public:
+    Veiculo(int v) : velocidade(v) {}
+    void acelerar() {
+        cout << "Acelerando a " << velocidade << " km/h" << endl;
+    }
+};
+
+class Carro : protected Veiculo {
+public:
+    Carro(int v) : Veiculo(v) {}
+    void dirigir() {
+        acelerar();
+        cout << "Dirigindo o carro" << endl;
+    }
+};
+
+Questão 4
+
+Em Java, a declaração de variáveis e a manipulação de objetos são feitas usando 
+referências, mas essas referências são mais como alças do que como ponteiros 
+diretos. Em outras palavras, ao declarar uma variável em Java, você está criando 
+uma referência a um objeto, não um ponteiro direto para a posição de memória do 
+objeto.
